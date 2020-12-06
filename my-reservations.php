@@ -1,3 +1,5 @@
+<?php include "database-connection.php" ?>
+
 <!doctype html>
 <html>
 <head>
@@ -8,9 +10,7 @@
 
     <?php include "menu.php" ?>
 
-    <h1>Начало</h1>
-
-    <p>text text text ....</p>
+    <h1>Мои резервации</h1>
 
 </body>
 </html>
