@@ -1,14 +1,4 @@
-<?php include "database-connection.php" ?>
-
-<!doctype html>
-<html>
-<head>
-    <title>Хотел</title>
-    <meta charset="UTF-8">
-</head>
-<body>
-
-    <?php include "menu.php" ?>
+<?php include "layout/header.php" ?>
 
     <h1>Резервации</h1>
 
@@ -56,5 +46,4 @@
         }
     ?>
 
-</body>
-</html>
+<?php include "layout/footer.php" ?>
