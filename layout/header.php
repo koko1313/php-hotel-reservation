@@ -1,4 +1,5 @@
 <?php include "./database/database-connection.php" ?>
+<?php session_start(); ?>
 
 <!doctype html>
 <html>
