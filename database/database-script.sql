@@ -33,22 +33,27 @@ CREATE TABLE reservation (
 
 CREATE VIEW roomview AS 
 SELECT 
+	room.id AS roomid,
 	room.bednumber,
 	room.windowview,
 	room.roomnumber,
+	roomtype.id AS roomtypeid,
 	roomtype.roomtype
 FROM room
-INNER JOIN roomtype ON room.roomtypeid=roomtype.id
+INNER JOIN roomtype ON room.roomtypeid=roomtype.id;
 
 CREATE VIEW reservationview AS
 SELECT
-	reservation.id,
+	reservation.id AS reservationid,
+	client.id AS clientid,
     client.firstname,
     client.lastname,
     client.preferredroombedcount,
+	roomtype.id AS roomtypeid,
     roomtype.roomtype,
+	room.id AS roomid,
     room.roomnumber
 FROM reservation
 INNER JOIN client ON reservation.clientid=client.id
 INNER JOIN room ON reservation.roomid=room.id
-INNER JOIN roomtype ON room.roomtypeid=roomtype.id
+INNER JOIN roomtype ON room.roomtypeid=roomtype.id;
