@@ -76,7 +76,7 @@
                                 WHERE 
                                     roomtypeid='". $_POST["prefered_room_type"] ."'
                                 AND
-                                    bednumber='". $_POST["prefered_bed_count"] ."'
+                                    bedcount='". $_POST["prefered_bed_count"] ."'
                             ");
                         ?>
 
@@ -84,7 +84,7 @@
 
                         <?php 
                             if(mysqli_num_rows($results) == 0) {
-                                echo "Няма намерени стаи.";
+                                echo "<p>Няма намерени стаи.</p>";
                             } else {
                                 while($room = mysqli_fetch_array($results)) {
                         ?>
