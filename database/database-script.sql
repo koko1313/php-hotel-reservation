@@ -33,7 +33,7 @@ CREATE TABLE reservation (
 
 CREATE VIEW roomview AS 
 SELECT 
-	room.bednumber,
+	room.bedcount,
 	room.windowview,
 	room.roomnumber,
 	roomtype.roomtype
