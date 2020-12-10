@@ -31,7 +31,12 @@
                     <label for="password"><b>Парола</b></label>
                     <input class="form-control" type="password" name="password" required> 
                     <hr class="mb-3">
-                    <input class="btn btn-primary" type="submit" name="login" value="Log In">
+                    <input class="btn btn-primary" type="submit" name="login" value="Влез">
+                </div>
+                <div class="col-sm-3 col text-center">
+                    <h1>Нямате акаунт?</h1>
+                    <p>Цъкнете бутона за да направите вашата регистрация!</p>
+                    <a href="registration.php" class="btn btn-primary float-right" role="button">Регистрирай се!</a>
                 </div>
             </div>
         </div>

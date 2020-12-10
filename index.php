@@ -71,7 +71,7 @@
       <div class="col text-center">
           <h1>Удобства</h1>
           <p>Хотелът разполага със СПА център, 5 ресторанта, фитнес център, барове и общи салони. Хотелът предлага денонощна рецепция, хеликоптерна площадка, конгресен център, рум-сървиз и билетни услуги за гостите.</p>
-          <a href="reservations.php" class="btn btn-primary text-center" role="button">Резервирай</a>
+          <a href="login.php" class="btn btn-primary text-center" role="button">Влез</a>
       </div>
       <div class="col text-center">
           <h1>СПА</h1>
