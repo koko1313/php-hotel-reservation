@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">Добре дошли</a>
+        <a class="navbar-brand" href="#">Тук слагаме логото!</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -11,10 +11,10 @@
                 </li>
                 <?php if (isset($_SESSION["user"])) { ?>
                     <li class="nav-item">
-                        <a class="nav-link<?php if($current_page == 'reservations') echo 'active' ?>" aria-current="page" href="reservations.php">Резервации</a>
+                        <a class="nav-link <?php if($current_page == 'reservations') echo 'active' ?>" aria-current="page" href="reservations.php">Резервации</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link<?php if($current_page == 'my-reservations') echo 'active' ?>" aria-current="page" href="my-reservations.php">Мои резервации</a>
+                        <a class="nav-link <?php if($current_page == 'my-reservations') echo 'active' ?>" aria-current="page" href="my-reservations.php">Мои резервации</a>
                     </li>
                 <?php } ?>
             </ul>
