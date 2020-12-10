@@ -11,10 +11,10 @@
                 </li>
                 <?php if (isset($_SESSION["user"])) { ?>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="reservations.php">Резервации</a>
+                        <a class="nav-link<?php if($current_page == 'reservations') echo 'active' ?>" aria-current="page" href="reservations.php">Резервации</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="my-reservations.php">Мои резервации</a>
+                        <a class="nav-link<?php if($current_page == 'my-reservations') echo 'active' ?>" aria-current="page" href="my-reservations.php">Мои резервации</a>
                     </li>
                 <?php } ?>
             </ul>
@@ -25,7 +25,7 @@
                     </li>
                 <?php } else{ ?>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="registration.php">Регистрация</a>
+                        <a class="nav-link <?php if($current_page == 'registration') echo 'active' ?>" aria-current="page" href="registration.php">Регистрация</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php if($current_page == 'login') echo 'active' ?>" aria-current="page" href="login.php">Вход</a>

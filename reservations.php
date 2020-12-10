@@ -1,6 +1,9 @@
 <?php include "layout/header.php" ?>
 
-    <?php include "layout/menu.php" ?>
+    <?php 
+        $current_page = 'reservations';
+        include "layout/menu.php";
+    ?>
 
     <div class="container main-content">
         <div class="row">

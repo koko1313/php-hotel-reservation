@@ -1,6 +1,8 @@
 <?php include "layout/header.php" ?>
-
-    <?php include "layout/menu.php" ?>
+    <?php 
+        $current_page = 'my-reservations';
+        include "layout/menu.php";
+    ?>
 
     <h1>Мои резервации</h1>
 
