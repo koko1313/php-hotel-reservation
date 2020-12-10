@@ -6,7 +6,13 @@
         
         $result = $db->query("SELECT * FROM client WHERE email='". $email ."' AND password='". $password ."'");
         $user = mysqli_fetch_array($result);
-        $_SESSION ["user"] = $user;
+        if($user){
+            $_SESSION ["user"] = $user;
+            header("Location: index.php"); 
+            exit();
+        } else {
+            echo'Грешни входни данни';
+        }
     }
 
 ?>
