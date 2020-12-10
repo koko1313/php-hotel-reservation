@@ -1,6 +1,9 @@
 <?php include "layout/header.php" ?>
 
-    <?php include "layout/menu.php" ?>
+    <?php 
+        $current_page = "login";
+        include "layout/menu.php";
+    ?>
 
     <?php 
         if(isset($_POST['login'])){

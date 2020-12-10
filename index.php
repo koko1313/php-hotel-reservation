@@ -1,6 +1,9 @@
 <?php include "layout/header.php" ?>
 
-  <?php include "layout/menu.php" ?>
+  <?php 
+    $current_page = "index";
+    include "layout/menu.php";
+  ?>
 
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
     <ol class="carousel-indicators">
