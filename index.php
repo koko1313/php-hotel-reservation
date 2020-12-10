@@ -10,15 +10,47 @@
       <div class="carousel-item active">
         <img class="d-block w-100" src="picture/backgroudn1.jpg" alt="First slide">
         <div class="carousel-caption d-none d-md-block">
-      <h1 class="display-1">Добре дошли, <?php echo $_SESSION["user"]["firstname"] ?></h1>
-      <p>Ще се насладите на гледките от хотела, както никога до сега!</p>
-    </div>
+            <h1 class="display-1">
+              <?php
+              if (isset($_SESSION['user'])){
+                echo 'Добре дошли, '.$_SESSION["user"]["firstname"];
+              }else{
+                echo 'Добре дошли';
+              }
+              ?>
+            </h1>
+            <p>Ще се насладите на вашата почивка, както никога до сега!</p>
+        </div>
       </div>
       <div class="carousel-item">
         <img class="d-block w-100" src="picture/backgroudn2.jpg" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+            <h1 class="display-1">
+              <?php
+              if (isset($_SESSION['user'])){
+                echo 'Добре дошли, '.$_SESSION["user"]["firstname"];
+              }else{
+                echo 'Добре дошли';
+              }
+              ?>
+            </h1>
+            <p>Ще се насладите на вашата почивка, както никога до сега!</p>
+        </div>
       </div>
       <div class="carousel-item">
         <img class="d-block w-100" src="picture/backgroudn3.jpg" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+            <h1 class="display-1">
+              <?php
+              if (isset($_SESSION['user'])){
+                echo 'Добре дошли, '.$_SESSION["user"]["firstname"];
+              }else{
+                echo 'Добре дошли';
+              }
+              ?>
+            </h1>
+            <p>Ще се насладите на вашата почивка, както никога до сега!</p>
+        </div>
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

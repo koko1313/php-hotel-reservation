@@ -13,3 +13,10 @@ body {
     height: 500px!important;
     overflow: hidden!important;
 } */
+
+ .carousel-inner{
+    text-shadow: 2px 2px black!important;
+  }
+.carousel-inner p{
+    font-size: 1.4em;
+}
