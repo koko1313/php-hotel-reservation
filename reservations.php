@@ -89,7 +89,7 @@
                                 while($room = mysqli_fetch_array($results)) {
                         ?>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="choosen_room" id="choosen_room">
+                                <input class="form-check-input" type="radio" name="choosen_room" id="choosen_room" value="<?php echo $room["roomid"] ?>">
                                 <label class="form-check-label" for="choosen_room">
                                     <?php echo $room["roomnumber"] ?>
                                 </label>
