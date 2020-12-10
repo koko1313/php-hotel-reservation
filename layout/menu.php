@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Добре дошли</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -14,6 +14,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="my-reservations.php">Мои резервации</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="registration.php">Регистрация</a>
                 </li>
             </ul>
         </div>
