@@ -5,6 +5,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <?php if (isset($_SESSION['user'])){ ?>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.php">Начало</a>
@@ -16,13 +17,18 @@
                     <a class="nav-link" aria-current="page" href="my-reservations.php">Мои резервации</a>
                 </li>
             </ul>
-            <ul class="navbar-nav navbar-right">
-            <?php if (isset($_SESSION['user'])){ ?>
+            <ul class="navbar-nav navbar-right"> 
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="logout.php">Изход</a>
                 </li>
-            <?php } else{ ?>
-            
+            </ul>
+            <?php } else { ?>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.php">Начало</a>
+                </li>
+                </ul>
+                <ul class="navbar-nav navbar-right">         
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="registration.php">Регистрация</a>
                 </li>
