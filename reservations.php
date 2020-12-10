@@ -1,5 +1,7 @@
 <?php include "layout/header.php" ?>
 
+    <?php include "layout/menu.php" ?>
+
     <div class="container main-content">
         <div class="row">
             <h1>Резервации</h1>
