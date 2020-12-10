@@ -17,12 +17,19 @@
                 </li>
             </ul>
             <ul class="navbar-nav navbar-right">
+            <?php if (isset($_SESSION['user'])){ ?>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="logout.php">Изход</a>
+                </li>
+            <?php } else{ ?>
+            
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="registration.php">Регистрация</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="login.php">Вход</a>
                 </li>
+            <?php };?>
             </ul>
         </div>
     </div>
