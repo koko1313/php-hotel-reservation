@@ -10,7 +10,7 @@
       <div class="carousel-item active">
         <img class="d-block w-100" src="picture/backgroudn1.jpg" alt="First slide">
         <div class="carousel-caption d-none d-md-block">
-      <h1 class="display-1">Добре дошли</h1>
+      <h1 class="display-1">Добре дошли, <?php echo $_SESSION["user"]["firstname"] ?></h1>
       <p>Ще се насладите на гледките от хотела, както никога до сега!</p>
     </div>
       </div>

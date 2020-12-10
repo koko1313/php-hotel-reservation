@@ -15,8 +15,13 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="my-reservations.php">Мои резервации</a>
                 </li>
+            </ul>
+            <ul class="navbar-nav navbar-right">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="registration.php">Регистрация</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="login.php">Вход</a>
                 </li>
             </ul>
         </div>
