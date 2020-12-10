@@ -20,6 +20,7 @@ CREATE TABLE client(
 	email varchar (30),
 	preferredroombedcount int,
 	preferredroomtypeid int unsigned,
+	`password` varchar (100) not null,
 	FOREIGN KEY (preferredroomtypeid) REFERENCES roomtype (id)
 )ENGINE=INNODB;
 
