@@ -32,11 +32,16 @@
                     <p>Попълнете внимателно формата за вход</p>
                     <hr class="mb-3"> 
                     
-                    <label for="email"><b>Имейл</b></label>
-                    <input class="form-control" type="email" name="email" required>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" type="email" name="email" id="email" placeholder="name@example.com" required>
+                        <label for="email">Имейл</label>
+                    </div>
                 
-                    <label for="password"><b>Парола</b></label>
-                    <input class="form-control" type="password" name="password" required> 
+                    <div class="form-floating mb-3">
+                        <input class="form-control" type="password" name="password" id="password" placeholder="pass123" required>
+                        <label for="password">Парола</label>
+                    </div>
+
                     <hr class="mb-3">
                     <input class="btn btn-primary" type="submit" name="login" value="Влез">
                 </div>
