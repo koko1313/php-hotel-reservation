@@ -1,5 +1,8 @@
-<?php include "./database/database-connection.php" ?>
-<?php session_start(); ?>
+<?php 
+    session_start();
+    include "./database/database-connection.php";
+    include "./util/all-utils.php";
+?>
 
 <!doctype html>
 <html>

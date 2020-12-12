@@ -1,5 +1,7 @@
 <?php include "layout/header.php" ?>
 
+    <?php redirectIfLogged() ?>
+
     <?php 
         $current_page = 'registration';
         include "layout/menu.php";

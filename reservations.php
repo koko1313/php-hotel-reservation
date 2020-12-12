@@ -1,5 +1,7 @@
 <?php include "layout/header.php" ?>
 
+    <?php redirectIfNotLogged() ?>
+
     <?php 
         $current_page = 'reservations';
         include "layout/menu.php";
