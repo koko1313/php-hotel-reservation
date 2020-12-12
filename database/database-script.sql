@@ -28,6 +28,7 @@ CREATE TABLE reservation (
 	id int unsigned PRIMARY KEY AUTO_INCREMENT,
 	clientid int unsigned,
 	roomid int unsigned,
+	'date' date,
 	FOREIGN KEY(clientid) REFERENCES client(id),
 	FOREIGN KEY(roomid) REFERENCES room(id)
 )ENGINE=INNODB;
