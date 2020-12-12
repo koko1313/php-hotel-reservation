@@ -2,6 +2,10 @@ body {
     background-color: #dbdbdb;
 }
 
+h1 {
+    text-align: center;
+}
+
 .main-content {
     background-color: #ffffff;
     border-radius: 1rem;
@@ -14,9 +18,9 @@ body {
     overflow: hidden!important;
 } */
 
- .carousel-inner{
+.carousel-inner{
     text-shadow: 2px 2px black!important;
-  }
+}
 .carousel-inner p{
     font-size: 1.4em;
 }
