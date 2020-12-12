@@ -14,27 +14,58 @@
 
             <?php if(!isset($_POST["find_rooms"])) { ?>
                 <form method="POST">
-
                     <div class="mb-3">
                         <label for="first_name" class="form-label">Име</label>
-                        <input type="text" class="form-control" id="first_name" name="first_name"/>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="first_name" 
+                            name="first_name" 
+                            value="<?php echo $_SESSION["user"]["firstname"] ?>" 
+                            disabled
+                        />
                     </div>
+
                     <div class="mb-3">
                         <label for="last_name" class="form-label">Фамилия</label>
-                        <input type="text" class="form-control" id="last_name" name="last_name"/>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="last_name" 
+                            name="last_name" 
+                            value="<?php echo $_SESSION["user"]["lastname"] ?>" 
+                            disabled
+                        />
                     </div>
+
                     <div class="mb-3">
                         <label for="phone" class="form-label">Телефон</label>
-                        <input type="number" class="form-control" id="phone" name="phone"/>
+                        <input 
+                            type="number" 
+                            class="form-control" 
+                            id="phone" 
+                            name="phone" 
+                            value="<?php echo $_SESSION["user"]["phone"] ?>" 
+                            disabled
+                        />
                     </div>
+
                     <div class="mb-3">
                         <label for="email" class="form-label">E-mail</label>
-                        <input type="email" class="form-control" id="email" name="email"/>
+                        <input 
+                            type="email" 
+                            class="form-control" 
+                            id="email" 
+                            name="email" 
+                            value="<?php echo $_SESSION["user"]["email"] ?>" 
+                            disabled
+                        />
                     </div>
+
                     <div class="mb-3">
                         <label for="prefered_room_type" class="form-label">Предпочитан тип стая</label>
-                        <select id="prefered_room_type" name="prefered_room_type" class="form-control">
-                            <option value="null">Избери тип стая</option>
+                        <select id="prefered_room_type" name="prefered_room_type" class="form-control" required>
+                            <option value="">Избери тип стая</option>
                             <?php
                                 while($roomtype = mysqli_fetch_array($results)) {
                                     echo "<option value='". $roomtype["id"] ."'>". $roomtype["roomtype"] ."</option>";
@@ -42,32 +73,25 @@
                             ?>
                         </select>
                     </div>
+
                     <div class="mb-3">
                         <label for="prefered_bed_count" class="form-label">Предпочитан брой легла</label>
-                        <input type="number" class="form-control" id="prefered_bed_count" name="prefered_bed_count"/>
+                        <input type="number" class="form-control" id="prefered_bed_count" name="prefered_bed_count" required/>
                     </div>
+
                     <div class="mb-3 d-flex justify-content-end">
                         <button name="find_rooms" class="btn btn-primary">Намери стая</button>
                     </div>
                 </form>
             <?php } else { ?>
-                <?php 
-                    $_SESSION["first_name"] = $_POST["first_name"];
-                    $_SESSION["last_name"] = $_POST["last_name"];
-                    $_SESSION["phone"] = $_POST["phone"];
-                    $_SESSION["email"] = $_POST["email"];
-                    $_SESSION["prefered_room_type"] = $_POST["prefered_room_type"];
-                    $_SESSION["prefered_bed_count"] = $_POST["prefered_bed_count"];
-                ?>
-
                 <div class="col">
                     <h3>Лични данни</h3>
-                    Име: <?php echo $_SESSION["first_name"] ?> <br/>
-                    Фамилия: <?php echo $_SESSION["last_name"] ?> <br/>
-                    Телефон: <?php echo $_SESSION["phone"] ?> <br/>
-                    E-mail: <?php echo $_SESSION["email"] ?> <br/>
-                    Предпочитан тип стая: <?php echo $_SESSION["prefered_room_type"] ?> <br/>
-                    Предпочитан брой легла: <?php echo  $_SESSION["prefered_bed_count"] ?>
+                    Име: <?php echo $_SESSION["user"]["firstname"] ?> <br/>
+                    Фамилия: <?php echo $_SESSION["user"]["lastname"] ?> <br/>
+                    Телефон: <?php echo $_SESSION["user"]["phone"] ?> <br/>
+                    E-mail: <?php echo $_SESSION["user"]["email"] ?> <br/>
+                    Предпочитан тип стая: <?php echo $_POST["prefered_room_type"] ?> <br/>
+                    Предпочитан брой легла: <?php echo  $_POST["prefered_bed_count"] ?>
                 </div>
 
                 <div class="col">
@@ -110,35 +134,19 @@
 
             <?php 
                 if(isset($_POST["reservation"])) {
-                    $db->query("
-                        INSERT INTO client (
-                            firstname, 
-                            lastname, 
-                            phone, 
-                            email, 
-                            preferredroombedcount, 
-                            preferredroomtypeid
-                        ) VALUES (
-                            '". $_SESSION["first_name"] ."', 
-                            '". $_SESSION["last_name"] ."', 
-                            '". $_SESSION["phone"] ."', 
-                            '". $_SESSION["email"] ."', 
-                            '". $_SESSION["prefered_bed_count"] ."', 
-                            '". $_SESSION["prefered_room_type"] .
-                        "')
-                    ");
+                    if(isset($_POST["choosen_room"])) {
+                        $db->query("
+                            INSERT INTO reservation (
+                                clientid,
+                                roomid
+                            ) VALUES (
+                                '". $_SESSION["user"]["id"] ."',
+                                '". $_POST["choosen_room"] ."'
+                            )
+                        ");
 
-                    $client_id =  $db->insert_id;
-
-                    $db->query("
-                        INSERT INTO reservation (
-                            clientid,
-                            roomid
-                        ) VALUES (
-                            '". $client_id ."',
-                            '". $_POST["choosen_room"] ."'
-                        )
-                    ");
+                        echo "<script>location.replace('my-reservations.php')</script>";
+                    }
                 }
             ?>
         </div>
