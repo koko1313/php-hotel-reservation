@@ -38,20 +38,31 @@
                         <h1>Регистрация</h1>
                         <p>Попълнете внимателно формата за регистрация</p>
                         <hr class="mb-3">
-                        <label for="firstname"><b>Име</b></label>
-                        <input class="form-control" type="text" name="firstname" required>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" name="firstname" id="firstname" placeholder="firstname" required>
+                            <label for="firstname">Име</label>
+                        </div>
                         
-                        <label for="lastname"><b>Фамилия</b></label>
-                        <input class="form-control" type="text" name="lastname" required>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" name="lastname" id="lastname" placeholder="lastname" required>
+                            <label for="lastname">Фамилия</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="email" name="email" id="email" placeholder="name@example.com" required>
+                            <label for="email">Имейл</label>
+                        </div>
                         
-                        <label for="email"><b>Имейл</b></label>
-                        <input class="form-control" type="email" name="email" required>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="number" name="phone" id="phone" placeholder="phone" required>
+                            <label for="phone">Телефон</label>
+                        </div>
                         
-                        <label for="phone"><b>Телефон</b></label>
-                        <input class="form-control" type="number" name="phone" required>
-                        
-                        <label for="password"><b>Парола</b></label>
-                        <input class="form-control" type="password" name="password" required> 
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="password" name="password" id="password" placeholder="pass123" required>
+                            <label for="password">Парола</label>
+                        </div>
+
                         <hr class="mb-3">
                         <input class="btn btn-primary" type="submit" name="create" value="Sign Up">
                     </div>
