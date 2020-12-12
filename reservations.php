@@ -1,11 +1,8 @@
+<?php $current_page = 'reservations' ?>
+
 <?php include "layout/header.php" ?>
 
     <?php redirectIfNotLogged() ?>
-
-    <?php 
-        $current_page = 'reservations';
-        include "layout/menu.php";
-    ?>
 
     <div class="container main-content">
         <div class="row">

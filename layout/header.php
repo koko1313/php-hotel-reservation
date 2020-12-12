@@ -19,4 +19,4 @@
 </head>
 <body>
 
-    
+    <?php include "./layout/menu.php" ?>

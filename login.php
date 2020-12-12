@@ -1,11 +1,9 @@
+<?php $current_page = "login" ?>
+
 <?php include "layout/header.php" ?>
 
     <?php redirectIfLogged() ?>
 
-    <?php 
-        $current_page = "login";
-        include "layout/menu.php";
-    ?>
     <?php 
         if(isset($_POST['login'])){
             $email = $_POST['email'];

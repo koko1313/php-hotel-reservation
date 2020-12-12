@@ -1,11 +1,8 @@
+<?php  $current_page = 'registration' ?>
+
 <?php include "layout/header.php" ?>
 
     <?php redirectIfLogged() ?>
-
-    <?php 
-        $current_page = 'registration';
-        include "layout/menu.php";
-    ?>
 
     <?php 
         if(isset($_POST['create'])){
