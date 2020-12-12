@@ -32,9 +32,9 @@
     ?>
     <div>
         <form action="registration.php" method="post">
-            <div class="container">
+            <div class="container main-content">
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col">
                         <h1>Регистрация</h1>
                         <p>Попълнете внимателно формата за регистрация</p>
                         <hr class="mb-3">

@@ -26,9 +26,9 @@
     
     <div>
         <form method="post">
-            <div class="container">
+            <div class="container main-content">
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-md">
                         <h1>Вход</h1>
                         <p>Попълнете внимателно формата за вход</p>
                         <hr class="mb-3"> 
@@ -46,7 +46,7 @@
                         <hr class="mb-3">
                         <input class="btn btn-primary" type="submit" name="login" value="Влез">
                     </div>
-                    <div class="col-sm-3 col text-center">
+                    <div class="col-md-3 col text-center">
                         <h1>Нямате акаунт?</h1>
                         <p>Цъкнете бутона за да направите вашата регистрация!</p>
                         <a href="registration.php" class="btn btn-primary float-right" role="button">Регистрирай се!</a>
