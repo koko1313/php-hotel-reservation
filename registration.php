@@ -12,21 +12,21 @@
             $phone = $_POST['phone'];
             $password = md5($_POST['password']);
             
-            
-                $db->query("INSERT INTO client(
-                    firstname, 
-                    lastname, 
-                    email, 
-                    phone, 
-                    password) 
-                    VALUES
-                    ('". $firstname ."', 
-                    '". $lastname ."', 
-                    '". $email ."', 
-                    '". $phone ."', 
-                    '". $password ."')"
-                );
-            
+            $db->query("INSERT INTO client(
+                firstname, 
+                lastname, 
+                email, 
+                phone, 
+                password) 
+                VALUES
+                ('". $firstname ."', 
+                '". $lastname ."', 
+                '". $email ."', 
+                '". $phone ."', 
+                '". $password ."')"
+            );
+
+            header("Location: login.php");
         }
 
     ?>
