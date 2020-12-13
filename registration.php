@@ -64,7 +64,7 @@
                         </div>
 
                         <hr class="mb-3">
-                        <input class="btn btn-primary" type="submit" name="create" value="Sign Up">
+                        <input class="btn btn-primary" type="submit" name="create" value="Регистрирай се">
                     </div>
                 </div>
             </div>
