@@ -17,7 +17,7 @@ CREATE TABLE client(
 	firstname varchar (20),
 	lastname varchar (20),
 	phone varchar (10),
-	email varchar (30),
+	email varchar (30) UNIQUE,
 	preferredroombedcount int,
 	preferredroomtypeid int unsigned,
 	`password` varchar (100) not null,
