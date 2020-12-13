@@ -26,9 +26,9 @@
     
     <div>
         <form method="post">
-            <div>
+            <div class="container main-content">
                 <div class="row">
-                    <div class="col-md container main-content">
+                    <div class="col-md">
                         <h1>Вход</h1>
                         <p>Попълнете внимателно формата за вход</p>
                         <hr class="mb-3"> 
