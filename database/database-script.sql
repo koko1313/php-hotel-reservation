@@ -19,7 +19,7 @@ CREATE TABLE room(
 
 CREATE TABLE user(
 	id int unsigned PRIMARY KEY AUTO_INCREMENT,
-	roleid int unsigned,
+	roleid int unsigned DEFAULT 2,
 	firstname varchar (20),
 	lastname varchar (20),
 	phone varchar (10),
