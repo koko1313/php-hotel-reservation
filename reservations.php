@@ -2,7 +2,10 @@
 
 <?php include "layout/header.php" ?>
 
-    <?php redirectIfNotLogged() ?>
+    <?php 
+        redirectIfNotLogged();
+        redirectIfAdmin();
+    ?>
 
     <div class="container main-content">
         <div class="row">
