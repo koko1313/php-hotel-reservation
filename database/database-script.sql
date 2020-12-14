@@ -33,6 +33,13 @@ CREATE TABLE reservation (
 	FOREIGN KEY(roomid) REFERENCES room(id)
 )ENGINE=INNODB;
 
+CREATE TABLE contactform (
+	id int unsigned PRIMARY KEY AUTO_INCREMENT,
+	`name` varchar (50) not null,
+	mail varchar (50) not null,
+	`text` varchar (1500) not null
+)ENGINE=INNODB;
+
 CREATE VIEW roomview AS 
 SELECT 
 	room.id AS roomid,
