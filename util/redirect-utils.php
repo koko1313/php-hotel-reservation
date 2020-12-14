@@ -14,18 +14,4 @@
         }
     }
 
-    function redirectIfNotLoggedAdmin() {
-        if(!isset($_SESSION["admin"])) {
-            header("Location: index.php"); 
-            exit();
-        }
-    }
-
-    function redirectIfLoggedAdmin() {
-        if(isset($_SESSION["admin"])) {
-            header("Location: index.php"); 
-            exit();
-        }
-    }
-
 ?>
