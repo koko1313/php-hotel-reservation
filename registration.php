@@ -26,7 +26,17 @@
                 '". $password ."')"
             );
 
-            header("Location: login.php");
+            // Duplicate value
+            if($db->errno == 1062) {
+                echo "
+                    <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                        Вече има регистриран потребител с този email.
+                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                    </div>
+                ";
+            } else {
+                header("Location: login.php");
+            }
         }
 
     ?>
