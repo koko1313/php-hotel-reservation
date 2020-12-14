@@ -113,18 +113,25 @@
                         <h1>Свържете се с нас</h1>
                         <p class="text-center">Попълнете формата за да се свържете с нас</p>
                         <hr class="mb-3">
-                        <div class="form-floating mb-3">
-                            <input class="form-control" type="text" name="name" id="name" placeholder="name" required>
-                            <label for="name">Име и Фамилия</label>
-                        </div>
 
-                        <div class="form-floating mb-3">
-                            <input class="form-control" type="еmail" name="email" id="email" placeholder="name@example.com" required>
-                            <label for="email">Имейл</label>
+                        <div class="row">
+                          <div class="col-md">
+                            <div class="form-floating mb-3">
+                                <input class="form-control" type="text" name="name" id="name" placeholder="name" required>
+                                <label for="name">Име и Фамилия</label>
+                            </div>
+                          </div>
+
+                          <div class="col-md">
+                            <div class="form-floating mb-3">
+                                <input class="form-control" type="еmail" name="email" id="email" placeholder="name@example.com" required>
+                                <label for="email">Имейл</label>
+                            </div>
+                          </div>
                         </div>
                         
                         <div class="form-floating mb-3">
-                            <input class="form-control input-lg" type="text" name="text" id="text" placeholder="text" required>
+                            <textarea class="form-control" placeholder="text" id="text" name="text" style="height: 200px" required></textarea>
                             <label for="text">Вашето съобщение</label>
                         </div>
 
