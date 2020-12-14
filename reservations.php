@@ -141,7 +141,7 @@
                     if(isset($_POST["choosen_room"])) {
                         $db->query("
                             INSERT INTO reservation (
-                                clientid,
+                                userid,
                                 roomid
                             ) VALUES (
                                 '". $_SESSION["user"]["id"] ."',

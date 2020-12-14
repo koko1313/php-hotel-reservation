@@ -12,7 +12,7 @@
             $phone = $_POST['phone'];
             $password = md5($_POST['password']);
             
-            $db->query("INSERT INTO client(
+            $db->query("INSERT INTO user(
                 firstname, 
                 lastname, 
                 email, 
