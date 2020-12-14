@@ -8,7 +8,7 @@
         $results = $db->query("
             SELECT *
             FROM reservationview
-            WHERE clientid = '". $_SESSION["user"]["id"] ."'
+            WHERE userid = '". $_SESSION["user"]["id"] ."'
         ");
     ?>
 

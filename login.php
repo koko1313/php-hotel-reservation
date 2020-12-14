@@ -9,7 +9,7 @@
             $email = $_POST['email'];
             $password = md5($_POST['password']);
             
-            $result = $db->query("SELECT * FROM client WHERE email='". $email ."' AND password='". $password ."'");
+            $result = $db->query("SELECT * FROM user WHERE email='". $email ."' AND password='". $password ."'");
             $user = mysqli_fetch_array($result);
             if($user){
                 $_SESSION ["user"] = $user;
