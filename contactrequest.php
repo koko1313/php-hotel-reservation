@@ -2,7 +2,7 @@
 
 <?php include "layout/header.php" ?>
 
-<?php redirectIfNotLogged() ?>
+<?php redirectIfNotLoggedAdmin() ?>
 
     <?php 
         $results = $db->query("

@@ -9,19 +9,26 @@
                 <li class="nav-item">
                     <a class="nav-link <?php if($current_page == 'index') echo 'active' ?>" aria-current="page" href="index.php">Начало</a>
                 </li>
-                <?php if (isset($_SESSION["user"])) { ?>
+                <?php if (isset($_SESSION['user'])) { ?>
                     <li class="nav-item">
                         <a class="nav-link <?php if($current_page == 'reservations') echo 'active' ?>" aria-current="page" href="reservations.php">Резервации</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php if($current_page == 'my-reservations') echo 'active' ?>" aria-current="page" href="my-reservations.php">Мои резервации</a>
                     </li>
+                <?php } ?>
+                <?php if (isset($_SESSION['admin'])) { ?>    
                     <li class="nav-item">
                         <a class="nav-link <?php if($current_page == 'contactrequest') echo 'active' ?>" aria-current="page" href="contactrequest.php">Изпратени запитвания</a>
                     </li>
                 <?php } ?>
             </ul>
             <ul class="navbar-nav navbar-right">
+                <?php if (isset($_SESSION['admin'])){ ?>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="adminlogout.php">Изход от администраторска сесия</a>
+                    </li>
+                <?php } ?>
                 <?php if (isset($_SESSION['user'])){ ?>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="logout.php">Изход</a>

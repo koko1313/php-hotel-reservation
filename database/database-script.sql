@@ -40,6 +40,11 @@ CREATE TABLE contactform (
 	`text` varchar (1500) not null
 )ENGINE=INNODB;
 
+CREATE TABLE adminlogin(
+	username varchar (20),
+	`password` varchar (20)
+)ENGINE=INNODB;
+
 CREATE VIEW roomview AS 
 SELECT 
 	room.id AS roomid,
