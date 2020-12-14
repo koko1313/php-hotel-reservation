@@ -65,6 +65,7 @@ SELECT
 	user.lastname,
 	user.phone,
 	user.email,
+	user.password,
 	user.preferredroombedcount,
 	user.preferredroomtypeid,
 	user.roleid,
