@@ -84,13 +84,17 @@
                     </div>
                 </form>
             <?php } else { ?>
+                <?php 
+                    $roomEntry = $db->query("SELECT * FROM roomview WHERE roomtypeid = '". $_POST["prefered_room_type"] ."'");
+                    $room = mysqli_fetch_array($roomEntry);
+                ?>
                 <div class="col">
                     <h3>Лични данни</h3>
                     Име: <?php echo $_SESSION["user"]["firstname"] ?> <br/>
                     Фамилия: <?php echo $_SESSION["user"]["lastname"] ?> <br/>
                     Телефон: <?php echo $_SESSION["user"]["phone"] ?> <br/>
                     E-mail: <?php echo $_SESSION["user"]["email"] ?> <br/>
-                    Предпочитан тип стая: <?php echo $_POST["prefered_room_type"] ?> <br/>
+                    Предпочитан тип стая: <?php echo $room["roomtype"] ?> <br/>
                     Предпочитан брой легла: <?php echo  $_POST["prefered_bed_count"] ?>
                 </div>
 
