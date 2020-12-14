@@ -46,6 +46,13 @@
                 </div>
             </div>  
         </div>
+        <!-- stops the popup on ressubmission -->
+        <script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
+        <!-- stops the popup on ressubmission -->
      </footer>
 </body>
 </html>

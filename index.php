@@ -86,5 +86,55 @@
     <h1 class="display-2 text-center">Открий ни тук!</h1>
   <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2909.6869816507115!2d27.925841376425826!3d43.17409426171575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgoogle%20maps!5e0!3m2!1sen!2sbg!4v1607610982608!5m2!1sen!2sbg" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   </div>
+  <!-- trying to add contact -->
+  <?php 
+        if(isset($_POST['send'])){
+            $name = $_POST['name'];
+            $mail = $_POST['mail'];
+            $text = $_POST['text'];
+            
+            $db->query("INSERT INTO contactform(
+                name,  
+                mail,  
+                text) 
+                VALUES
+                ('". $name ."',  
+                '". $mail ."', 
+                '". $text ."')"
+            );
+          }
+  ?>
+  
+  <div>
+        <form method="post">
+            <div class="container main-content">
+                <div class="row">
+                    <div class="col">
+                        <h1>Свържете се с нас</h1>
+                        <p class="text-center">Попълнете формата за да се свържете с нас</p>
+                        <hr class="mb-3">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" name="name" id="name" placeholder="name" required>
+                            <label for="name">Име и Фамилия</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="еmail" name="mail" id="mail" placeholder="name@example.com" required>
+                            <label for="mail">Имейл</label>
+                        </div>
+                        
+                        <div class="form-floating mb-3">
+                            <input class="form-control input-lg" type="text" name="text" id="text" placeholder="text" required>
+                            <label for="text">Вашето съобщение</label>
+                        </div>
+
+                        <hr class="mb-3">
+                        <input class="btn btn-primary" type="submit" name="send" value="Изпрати">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+  <!-- contact code ends -->
   
 <?php include "layout/footer.php" ?>
