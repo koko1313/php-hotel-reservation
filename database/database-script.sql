@@ -3,6 +3,11 @@ CREATE TABLE roomtype(
     roomtype varchar (20)
 )ENGINE=INNODB;
 
+CREATE TABLE `role`(
+    id int unsigned primary key AUTO_INCREMENT,
+    `role` varchar (20)
+)ENGINE=INNODB;
+
 CREATE TABLE room(
 	id int unsigned PRIMARY KEY AUTO_INCREMENT,
 	bedcount int,
@@ -14,6 +19,7 @@ CREATE TABLE room(
 
 CREATE TABLE user(
 	id int unsigned PRIMARY KEY AUTO_INCREMENT,
+	roleid int unsigned,
 	firstname varchar (20),
 	lastname varchar (20),
 	phone varchar (10),
@@ -21,7 +27,8 @@ CREATE TABLE user(
 	preferredroombedcount int,
 	preferredroomtypeid int unsigned,
 	`password` varchar (100) not null,
-	FOREIGN KEY (preferredroomtypeid) REFERENCES roomtype (id)
+	FOREIGN KEY (preferredroomtypeid) REFERENCES roomtype (id),
+	FOREIGN KEY (roleid) REFERENCES `role` (id)
 )ENGINE=INNODB;
 
 CREATE TABLE reservation (
@@ -50,6 +57,20 @@ SELECT
 	roomtype.roomtype
 FROM room
 INNER JOIN roomtype ON room.roomtypeid=roomtype.id;
+
+CREATE VIEW userview AS 
+SELECT 
+	user.id,
+	user.firstname,
+	user.lastname,
+	user.phone,
+	user.email,
+	user.preferredroombedcount,
+	user.preferredroomtypeid,
+	user.roleid,
+	`role`.`role`
+FROM user
+INNER JOIN `role` ON user.roleid=`role`.id;
 
 CREATE VIEW reservationview AS
 SELECT
