@@ -36,8 +36,13 @@ CREATE TABLE reservation (
 CREATE TABLE contactform (
 	id int unsigned PRIMARY KEY AUTO_INCREMENT,
 	`name` varchar (50) not null,
-	mail varchar (50) not null,
+	email varchar (50) not null,
 	`text` varchar (1500) not null
+)ENGINE=INNODB;
+
+CREATE TABLE adminlogin(
+	username varchar (20),
+	`password` varchar (20)
 )ENGINE=INNODB;
 
 CREATE VIEW roomview AS 

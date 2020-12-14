@@ -2,7 +2,7 @@
 
 <?php include "layout/header.php" ?>
 
-<?php redirectIfNotLogged() ?>
+<?php redirectIfNotLoggedAdmin() ?>
 
     <?php 
         $results = $db->query("
@@ -25,7 +25,7 @@
                 <?php while($contactform = mysqli_fetch_array($results)) { ?>
                     <tr>
                         <th scope="row"><?php echo $contactform["name"] ?></th>
-                        <td><?php echo $contactform["mail"] ?></td>
+                        <td><?php echo $contactform["email"] ?></td>
                         <td><?php echo $contactform["text"] ?></td>
                     </tr>
                 <?php } ?>

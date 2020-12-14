@@ -90,16 +90,16 @@
   <?php 
         if(isset($_POST['send'])){
             $name = $_POST['name'];
-            $mail = $_POST['mail'];
+            $email = $_POST['email'];
             $text = $_POST['text'];
             
             $db->query("INSERT INTO contactform(
                 name,  
-                mail,  
+                email,  
                 text) 
                 VALUES
                 ('". $name ."',  
-                '". $mail ."', 
+                '". $email ."', 
                 '". $text ."')"
             );
           }
@@ -119,8 +119,8 @@
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input class="form-control" type="еmail" name="mail" id="mail" placeholder="name@example.com" required>
-                            <label for="mail">Имейл</label>
+                            <input class="form-control" type="еmail" name="email" id="email" placeholder="name@example.com" required>
+                            <label for="email">Имейл</label>
                         </div>
                         
                         <div class="form-floating mb-3">

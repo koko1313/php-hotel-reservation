@@ -10,3 +10,8 @@ INSERT INTO room(bedcount, windowview, roomnumber, roomtypeid)
     ("4", "Гледка към морете", "202", "3"), -- Студио
     ("5", "Гледка към морете", "203", "4"), -- Апартамент
     ("5", "Гледка към морете", "204", "4"); -- Апартамент
+
+INSERT INTO adminlogin(username, password)
+    VALUES
+    ("admin", "admin");
+    
