@@ -13,3 +13,16 @@
     - Bootstrap
 - PHP
 - MySql
+
+
+## Roles in the system
+
+1. Administrator
+    - Check user questions
+    - Check client reservations
+2. Client
+    - Make reservation
+    - Check his own reservations
+    - Send questions
+3. Guest
+    - Send questions
