@@ -22,6 +22,9 @@
                         <li class="nav-item">
                             <a class="nav-link <?php if($current_page == 'contactrequest') echo 'active' ?>" aria-current="page" href="contactrequest.php">Изпратени запитвания</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?php if($current_page == 'my-reservations') echo 'active' ?>" aria-current="page" href="my-reservations.php">Резервации</a>
+                        </li>
                     <?php } ?>
                 <?php } ?>
             </ul>
