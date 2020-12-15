@@ -17,12 +17,12 @@
 
 ## Roles in the system
 
-1. Administrator
+1. **Administrator**
     - Check user questions
     - Check client reservations
-2. Client
+2. **Client**
     - Make reservation
     - Check his own reservations
     - Send questions
-3. Guest
+3. **Guest**
     - Send questions
