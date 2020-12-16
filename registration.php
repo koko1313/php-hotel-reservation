@@ -33,7 +33,7 @@
                     </div>
                 ";
             } else {
-                header("Location: login.php");
+                redirectTo("login.php");
             }
         }
 
