@@ -1,5 +1,3 @@
-<?php $current_page = "login" ?>
-
 <?php include "layout/header.php" ?>
 
     <?php redirectIfLogged() ?>

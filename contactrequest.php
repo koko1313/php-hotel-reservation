@@ -1,5 +1,3 @@
-<?php $current_page = "contactrequest" ?>
-
 <?php include "layout/header.php" ?>
 
 <?php redirectIfNotAdmin() ?>
