@@ -30,5 +30,5 @@
 
 ## Admin credentials
 
-**Email:** *admin@admin.com*
+**Email:** *admin@admin.com*  
 **Password:** *admin*
