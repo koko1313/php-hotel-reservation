@@ -26,3 +26,9 @@
     - Send questions
 3. **Guest**
     - Send questions
+
+
+## Admin credentials
+
+**Email:** *admin@admin.com*
+**Password:** *admin*
