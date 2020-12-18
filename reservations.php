@@ -91,7 +91,7 @@
                     $roomEntry = $db->query("SELECT * FROM roomview WHERE roomtypeid = '". $_POST["prefered_room_type"] ."'");
                     $room = mysqli_fetch_array($roomEntry);
                 ?>
-                <div class="col">
+                <div class="col-md">
                     <h3>Лични данни</h3>
                     Име: <?php echo $_SESSION["user"]["firstname"] ?> <br/>
                     Фамилия: <?php echo $_SESSION["user"]["lastname"] ?> <br/>
@@ -101,7 +101,7 @@
                     Предпочитан брой легла: <?php echo  $_POST["prefered_bed_count"] ?>
                 </div>
 
-                <div class="col">
+                <div class="col-md">
                     <form method="POST">
                         <?php 
                             $results = $db->query("
