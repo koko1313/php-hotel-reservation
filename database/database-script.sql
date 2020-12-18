@@ -92,8 +92,8 @@ INNER JOIN user ON reservation.userid=user.id
 INNER JOIN room ON reservation.roomid=room.id
 INNER JOIN roomtype ON room.roomtypeid=roomtype.id;
 
-ALTER DATABASE hotel CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-ALTER TABLE user CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-ALTER TABLE reservation CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-ALTER TABLE room CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-ALTER TABLE roomtype CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+-- ALTER DATABASE hotel CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+-- ALTER TABLE user CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+-- ALTER TABLE reservation CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+-- ALTER TABLE room CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+-- ALTER TABLE roomtype CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
