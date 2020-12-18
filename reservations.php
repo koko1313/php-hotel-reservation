@@ -63,6 +63,17 @@
                         />
                     </div>
 
+                    <div class="row">
+                        <div class="mb-3 col-md">
+                            <label for="fromdate" class="form-label">От дата</label>
+                            <input type="date" class="form-control" id="fromdate" name="fromdate" required/>
+                        </div>
+                        <div class="mb-3 col-md">
+                            <label for="todate" class="form-label">До дата</label>
+                            <input type="date" class="form-control" id="todate" name="todate" required/>
+                        </div>
+                    </div>
+
                     <div class="mb-3">
                         <label for="prefered_room_type" class="form-label">Предпочитан тип стая</label>
                         <select id="prefered_room_type" name="prefered_room_type" class="form-control" required>
@@ -132,6 +143,10 @@
                             }
                         ?>
 
+                        <!-- hidded fields for the date -->
+                        <input type="hidden" class="form-control" id="fromdate" name="fromdate" value="<?php echo $_POST["fromdate"] ?>"/>
+                        <input type="hidden" class="form-control" id="todate" name="todate" value="<?php echo $_POST["todate"] ?>"/>
+
                         <button name="reservation" class="btn btn-primary">Резервирай</button>
                     </form>
                 </div>
@@ -143,10 +158,14 @@
                         $db->query("
                             INSERT INTO reservation (
                                 userid,
-                                roomid
+                                roomid,
+                                fromdate,
+                                todate
                             ) VALUES (
                                 '". $_SESSION["user"]["id"] ."',
-                                '". $_POST["choosen_room"] ."'
+                                '". $_POST["choosen_room"] ."',
+                                '". $_POST["fromdate"] ."',
+                                '". $_POST["todate"] ."'
                             )
                         ");
 
