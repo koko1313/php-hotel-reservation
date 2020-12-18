@@ -134,11 +134,70 @@
                         </div>
 
                         <hr class="mb-3">
-                        <input class="btn btn-primary" type="submit" name="send" value="Изпрати">
+                        <input class="btn btn-primary" type="submit" name="send" id="submit" value="Изпрати" disabled>
                     </div>
                 </div>
             </div>
         </form>
+
+        <script>
+          let nameIsValid = false;
+          let emailIsValid = false;
+          let textIsValid = false;
+
+          const nameInput = document.getElementById("name");
+          const emailInput = document.getElementById("email");
+          const textInput = document.getElementById("text");
+          
+          nameInput.addEventListener("keyup", function (){
+            if(nameInput.value != "") {
+              nameIsValid = true;
+              nameInput.classList.add("is-valid");
+              nameInput.classList.remove("is-invalid");
+            } else {
+              nameInput.classList.add("is-invalid");
+              nameInput.classList.remove("is-valid");
+              nameIsValid = false;
+            }
+            updateSubmitButton();
+          });
+
+          emailInput.addEventListener("keyup", function (){
+            if(emailInput.value != "") {
+              emailIsValid = true;
+              emailInput.classList.add("is-valid");
+              emailInput.classList.remove("is-invalid");
+            } else {
+              emailInput.classList.add("is-invalid");
+              emailInput.classList.remove("is-valid");
+              emailIsValid = false;
+            }
+            updateSubmitButton();
+          });
+
+          textInput.addEventListener("keyup", function (){
+            if(textInput.value != "") {
+              textIsValid = true;
+              textInput.classList.add("is-valid");
+              textInput.classList.remove("is-invalid");
+            } else {
+              textInput.classList.add("is-invalid");
+              textInput.classList.remove("is-valid");
+              textIsValid = false;
+            }
+            updateSubmitButton();
+          });
+
+          function updateSubmitButton() {
+            const submitButton = document.getElementById("submit");
+            if(nameIsValid && emailIsValid && textIsValid) {
+              submitButton.disabled = false;
+            } else {
+              submitButton.disabled = true;
+            }
+          }
+        </script>
+
     </div>
   <!-- contact code ends -->
   
