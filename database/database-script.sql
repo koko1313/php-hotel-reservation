@@ -77,6 +77,8 @@ INNER JOIN `role` ON user.roleid=`role`.id;
 CREATE VIEW reservationview AS
 SELECT
 	reservation.id AS reservationid,
+	reservation.fromdate,
+	reservation.todate,
 	user.id AS userid,
     user.firstname,
     user.lastname,
