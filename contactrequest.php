@@ -18,7 +18,7 @@
                 <tr>
                     <th scope="col">Име и Фамилия</th>
                     <th scope="col">Имейл</th>
-                    <th style="min-width:700px" scope="col">Съобщение</th>
+                    <th scope="col">Съобщение</th>
                 </tr>
             </thead>
             <tbody>
