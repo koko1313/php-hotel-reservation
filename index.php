@@ -1,5 +1,3 @@
-<?php $current_page = "index" ?>
-
 <?php include "layout/header.php" ?>
 
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">

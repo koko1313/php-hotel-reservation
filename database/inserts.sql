@@ -11,9 +11,9 @@ INSERT INTO room (bedcount, windowview, roomnumber, roomtypeid)
     ("5", "Гледка към морете", "203", "4"), -- Апартамент
     ("5", "Гледка към морете", "204", "4"); -- Апартамент
 
-INSERT into `ROLE` (`role`) VALUES
+INSERT INTO `role` (`role`) VALUES
     ("Admin"),
     ("Client");
 
-INSERT into user (firstname, lastname, roleid, email, `password`) VALUES
+INSERT INTO user (firstname, lastname, roleid, email, `password`) VALUES
     ("Admin", "Admin", 1, "admin@admin.com", MD5("admin"));

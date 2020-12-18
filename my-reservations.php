@@ -1,5 +1,3 @@
-<?php $current_page = 'my-reservations' ?>
-
 <?php include "layout/header.php" ?>
 
     <?php 

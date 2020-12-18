@@ -1,5 +1,3 @@
-<?php  $current_page = 'registration' ?>
-
 <?php include "layout/header.php" ?>
 
     <?php redirectIfLogged() ?>
@@ -35,7 +33,7 @@
                     </div>
                 ";
             } else {
-                header("Location: login.php");
+                redirectTo("login.php");
             }
         }
 

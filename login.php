@@ -1,5 +1,3 @@
-<?php $current_page = "login" ?>
-
 <?php include "layout/header.php" ?>
 
     <?php redirectIfLogged() ?>
@@ -13,8 +11,7 @@
             $user = mysqli_fetch_array($result);
             if($user){
                 $_SESSION ["user"] = $user;
-                header("Location: index.php"); 
-                exit();
+                redirectTo("index.php");
             } else { ?>
                 <div class="alert alert-danger fade show" role="alert">
                     <strong>Грешни данни!</strong> Моля опитайте да въведете данните отново.
