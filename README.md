@@ -1,4 +1,4 @@
-# Functioning project for a Hotel #
+# Functioning project for a Hotel
 
 
 ## Overview
