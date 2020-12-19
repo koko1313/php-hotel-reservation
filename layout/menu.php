@@ -11,6 +11,9 @@
                 <li class="nav-item">
                     <a class="nav-link <?php if($current_page == 'index') echo 'active' ?>" aria-current="page" href="index.php">Начало</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.php#form">Изпрати запитване</a>
+                </li>
                 <?php if (isset($_SESSION["user"])) { ?>
                     <?php if(!isAdmin()) { ?>
                         <li class="nav-item">

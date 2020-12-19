@@ -103,7 +103,8 @@
 		);
 	}
 ?>
-  
+
+<a name="form"></a>
 <form method="post" onKeyUp="validateForm(this)">
 	<div class="container main-content">
 		<div class="row">
