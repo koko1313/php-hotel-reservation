@@ -32,7 +32,7 @@
                     </div>
                 ";
             } else {
-                
+                redirectTo("rooms.php");
             }
         }
 
