@@ -5,7 +5,7 @@
                 $results = $db->query("SELECT * FROM roomtype");
             ?>
     <?php 
-        if(isset($_POST['create'])){
+        if(isset($_POST['add'])){
             $roomnumber = $_POST['roomnumber'];
             $bedcount = $_POST['bedcount'];
             $roomtypeid = $_POST['roomtypeid'];
@@ -72,7 +72,7 @@
                         </div>
                         
                         <hr class="mb-3">
-                        <button class="btn btn-primary" type="submit" name="create" disabled>Добави стая</button>
+                        <button class="btn btn-primary" type="submit" name="add" disabled>Добави стая</button>
                     </div>
                 </div>
             </div>

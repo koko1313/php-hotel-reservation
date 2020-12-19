@@ -5,7 +5,7 @@
     <?php 
         $results = $db->query("
             SELECT *
-            FROM roomview
+            FROM roomview ORDER BY roomnumber
         ");
     ?>
 

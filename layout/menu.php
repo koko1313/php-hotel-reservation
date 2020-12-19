@@ -34,7 +34,7 @@
                             <a class="nav-link <?php if($current_page == 'rooms') echo 'active' ?>" aria-current="page" href="rooms.php">Всички стаи</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php if($current_page == 'roomadd') echo 'active' ?>" aria-current="page" href="roomadd.php">Добавяне на стаи</a>
+                            <a class="nav-link <?php if($current_page == 'room-add') echo 'active' ?>" aria-current="page" href="room-add.php">Добавяне на стаи</a>
                         </li>
                     <?php } ?>
                 <?php } ?>
