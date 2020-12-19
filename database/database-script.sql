@@ -12,7 +12,7 @@ CREATE TABLE room(
 	id int unsigned PRIMARY KEY AUTO_INCREMENT,
 	bedcount int,
 	windowview varchar (30),
-	roomnumber varchar (3),
+	roomnumber varchar (3) UNIQUE,
 	roomtypeid int unsigned,
 	FOREIGN KEY (roomtypeid) REFERENCES roomtype(id)
 )ENGINE=INNODB;

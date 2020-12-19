@@ -30,6 +30,9 @@
                         <li class="nav-item">
                             <a class="nav-link <?php if($current_page == 'my-reservations') echo 'active' ?>" aria-current="page" href="my-reservations.php">Резервации</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?php if($current_page == 'roomadd') echo 'active' ?>" aria-current="page" href="roomadd.php">Добавяне на стаи</a>
+                        </li>
                     <?php } ?>
                 <?php } ?>
             </ul>
