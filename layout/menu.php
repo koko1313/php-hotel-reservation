@@ -35,14 +35,14 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="logout.php">Изход</a>
                     </li>
-                <?php } else{ ?>
+                <?php } else { ?>
                     <li class="nav-item">
                         <a class="nav-link <?php if($current_page == 'registration') echo 'active' ?>" aria-current="page" href="registration.php">Регистрация</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php if($current_page == 'login') echo 'active' ?>" aria-current="page" href="login.php">Вход</a>
                     </li>
-                <?php };?>
+                <?php } ?>
             </ul>
         </div>
     </div>
