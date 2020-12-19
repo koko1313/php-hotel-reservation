@@ -39,7 +39,7 @@
 
     ?>
     <div>
-        <form action="registration.php" method="post">
+        <form action="registration.php" method="post" onKeyUp="validateForm(this)">
             <div class="container main-content">
                 <div class="row">
                     <div class="col">
@@ -72,7 +72,7 @@
                         </div>
 
                         <hr class="mb-3">
-                        <input class="btn btn-primary" type="submit" name="create" value="Регистрирай се">
+                        <button class="btn btn-primary" type="submit" name="create" disabled>Регистрирай се</button>
                     </div>
                 </div>
             </div>

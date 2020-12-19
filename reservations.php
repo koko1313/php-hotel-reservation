@@ -14,7 +14,7 @@
             ?>
 
             <?php if(!isset($_POST["find_rooms"])) { ?>
-                <form method="POST">
+                <form method="POST" onKeyUp="validateForm(this)" onChange="validateForm(this)">
                     <div class="mb-3">
                         <label for="first_name" class="form-label">Име</label>
                         <input 
@@ -92,7 +92,7 @@
                     </div>
 
                     <div class="mb-3 d-flex justify-content-end">
-                        <button name="find_rooms" class="btn btn-primary">Намери стая</button>
+                        <button name="find_rooms" type="submit" class="btn btn-primary" disabled>Намери стая</button>
                     </div>
                 </form>
             <?php } else { ?>
@@ -111,7 +111,7 @@
                 </div>
 
                 <div class="col-md">
-                    <form method="POST">
+                    <form method="POST" onChange="validateForm(this)">
                         <?php 
                             $results = $db->query("
                                 SELECT 
@@ -147,7 +147,7 @@
                         <input type="hidden" class="form-control" id="fromdate" name="fromdate" value="<?php echo $_POST["fromdate"] ?>"/>
                         <input type="hidden" class="form-control" id="todate" name="todate" value="<?php echo $_POST["todate"] ?>"/>
 
-                        <button name="reservation" class="btn btn-primary">Резервирай</button>
+                        <button name="reservation" type="submit" class="btn btn-primary" disabled>Резервирай</button>
                     </form>
                 </div>
             <?php } ?>
