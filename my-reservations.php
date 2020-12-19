@@ -26,60 +26,62 @@
        echo "<h1>Мои резервации</h1>"
     ;} 
     ?>
-        <table class="table">
-            <thead>
-                <tr>
-                    <?php 
-                        if(isAdmin()) {
-                            echo '
-                                <th scope="col">Резервация №</th>
-                                <th scope="col">Име</th>
-                                <th scope="col">Фамилия</th>
-                                <th scope="col">Стая №</th>
-                                <th scope="col">Тип на стаята</th>
-                                <th scope="col">От дата</th>
-                                <th scope="col">До дата</th>
-                            ';
-                        } else {
-                            echo '
-                                <th scope="col">Резервация №</th>
-                                <th scope="col">Стая №</th>
-                                <th scope="col">Тип на стаята</th>
-                                <th scope="col">От дата</th>
-                                <th scope="col">До дата</th>
-                            ';
-                        }
-                        ?>
-                </tr>
-            </thead>
-            <tbody>
-                <?php while($reservation = mysqli_fetch_array($results)) { ?>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
                     <tr>
                         <?php 
                             if(isAdmin()) {
                                 echo '
-                                    <th scope="row">'.$reservation["reservationid"].'</th>
-                                    <td>'.$reservation["firstname"].'</td>
-                                    <td>'.$reservation["lastname"].'</td>
-                                    <td>'.$reservation["roomnumber"].'</td>
-                                    <td>'.$reservation["roomtype"].'</td>
-                                    <td>'.date('d.m.Y', strtotime($reservation["fromdate"])).'</td>
-                                    <td>'.date('d.m.Y', strtotime($reservation["todate"])).'</td>
+                                    <th scope="col">Резервация №</th>
+                                    <th scope="col">Име</th>
+                                    <th scope="col">Фамилия</th>
+                                    <th scope="col">Стая №</th>
+                                    <th scope="col">Тип на стаята</th>
+                                    <th scope="col">От дата</th>
+                                    <th scope="col">До дата</th>
                                 ';
                             } else {
                                 echo '
-                                    <th scope="row">'.$reservation["reservationid"].'</th>
-                                    <td>'.$reservation["roomnumber"].'</td>
-                                    <td>'.$reservation["roomtype"].'</td>
-                                    <td>'.date('d.m.Y', strtotime($reservation["fromdate"])).'</td>
-                                    <td>'.date('d.m.Y', strtotime($reservation["todate"])).'</td>
-                                ';      
-                            } 
-                        ?>
+                                    <th scope="col">Резервация №</th>
+                                    <th scope="col">Стая №</th>
+                                    <th scope="col">Тип на стаята</th>
+                                    <th scope="col">От дата</th>
+                                    <th scope="col">До дата</th>
+                                ';
+                            }
+                            ?>
                     </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <?php while($reservation = mysqli_fetch_array($results)) { ?>
+                        <tr>
+                            <?php 
+                                if(isAdmin()) {
+                                    echo '
+                                        <th scope="row">'.$reservation["reservationid"].'</th>
+                                        <td>'.$reservation["firstname"].'</td>
+                                        <td>'.$reservation["lastname"].'</td>
+                                        <td>'.$reservation["roomnumber"].'</td>
+                                        <td>'.$reservation["roomtype"].'</td>
+                                        <td>'.date('d.m.Y', strtotime($reservation["fromdate"])).'</td>
+                                        <td>'.date('d.m.Y', strtotime($reservation["todate"])).'</td>
+                                    ';
+                                } else {
+                                    echo '
+                                        <th scope="row">'.$reservation["reservationid"].'</th>
+                                        <td>'.$reservation["roomnumber"].'</td>
+                                        <td>'.$reservation["roomtype"].'</td>
+                                        <td>'.date('d.m.Y', strtotime($reservation["fromdate"])).'</td>
+                                        <td>'.date('d.m.Y', strtotime($reservation["todate"])).'</td>
+                                    ';      
+                                } 
+                            ?>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 <?php include "layout/footer.php" ?>
