@@ -38,7 +38,7 @@
 
     ?>
     <div>
-        <form method="post" onKeyUp="validateForm(this)">
+        <form method="post" onChange="validateForm(this)" onKeyUp="validateForm(this)">
             <div class="container main-content">
                 <div class="row">
                     <div class="col">

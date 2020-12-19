@@ -105,7 +105,7 @@
 ?>
 
 <a name="form"></a>
-<form method="post" onKeyUp="validateForm(this)">
+<form method="post" action="index.php" onKeyUp="validateForm(this)">
 	<div class="container main-content">
 		<div class="row">
 			<div class="col">
