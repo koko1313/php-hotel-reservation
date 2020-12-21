@@ -25,14 +25,9 @@
 
             // Duplicate value
             if($db->errno == 1062) {
-                echo "
-                    <div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                        Вече има стая с този номер.
-                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                    </div>
-                ";
+                setMessage("dangerMessage", "Вече има стая с този номер");
             } else {
-                redirectTo("rooms.php");
+                setMessageAndRedirect("successMessage", "Успешно добавена стая", "rooms.php");
             }
         }
 
@@ -43,6 +38,9 @@
                 <div class="row">
                     <div class="col">
                         <h1>Добавяне на стаи</h1>
+
+                        <?php include "components/alert.php" ?>
+
                         <hr class="mb-3">
 
                         <div class="mb-3">
