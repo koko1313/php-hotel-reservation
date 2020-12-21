@@ -169,7 +169,7 @@
                             )
                         ");
 
-                        echo "<script>location.replace('my-reservations.php')</script>";
+                        setMessageAndRedirect("successMessage", "Успешно направена резервация", "my-reservations.php");
                     }
                 }
             ?>

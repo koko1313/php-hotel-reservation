@@ -12,11 +12,8 @@
             if($user){
                 $_SESSION ["user"] = $user;
                 redirectTo("index.php");
-            } else { ?>
-                <div class="alert alert-danger fade show" role="alert">
-                    <strong>Грешни данни!</strong> Моля опитайте да въведете данните отново.
-                </div>
-    <?php 
+            } else {
+                setMessage("dangerMessage", "Грешни данни! Моля опитайте да въведете данните отново");
             }
         }
     ?>
@@ -28,8 +25,11 @@
                     <div class="col-md">
                         <h1>Вход</h1>
                         <p>Попълнете внимателно формата за вход</p>
-                        <hr class="mb-3"> 
                         
+                        <?php include "components/alert.php" ?>
+
+                        <hr class="mb-3"> 
+
                         <div class="form-floating mb-3">
                             <input class="form-control" type="email" name="email" id="email" placeholder="name@example.com" required>
                             <label for="email">Имейл</label>

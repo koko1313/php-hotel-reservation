@@ -19,13 +19,16 @@
     ?>
 
     <div class="container main-content">
-    <?php if(isAdmin()) {
-            echo "<h1>Всички резервации</h1>"
-    ;}
-    else{
-       echo "<h1>Мои резервации</h1>"
-    ;} 
+    <?php 
+        if(isAdmin()) {
+            echo "<h1>Всички резервации</h1>";
+        } else {
+            echo "<h1>Мои резервации</h1>";
+        } 
     ?>
+
+    <?php include "components/alert.php" ?>
+
         <div class="table-responsive">
             <table class="table">
                 <thead>

@@ -101,6 +101,8 @@
 			'". $email ."', 
 			'". $text ."')"
 		);
+
+		setMessage("successMessage", "Успешно изпратено запитване");
 	}
 ?>
 
@@ -111,6 +113,7 @@
 			<div class="col">
 				<h1>Свържете се с нас</h1>
 				<p class="text-center">Попълнете формата за да се свържете с нас</p>
+				<?php include "components/alert.php" ?>
 				<hr class="mb-3">
 			</div>
 		</div>

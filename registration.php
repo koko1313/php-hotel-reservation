@@ -26,18 +26,13 @@
 
             // Duplicate value
             if($db->errno == 1062) {
-                echo "
-                    <div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                        Вече има регистриран потребител с този email.
-                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                    </div>
-                ";
+                setMessage("dangerMessage", "Вече има регистриран потребител с този email");
             } else {
-                redirectTo("login.php");
+                setMessageAndRedirect("successMessage", "Успешна регистрация", "login.php");
             }
         }
-
     ?>
+    
     <div>
         <form action="registration.php" method="post" onKeyUp="validateForm(this)">
             <div class="container main-content">
@@ -45,6 +40,9 @@
                     <div class="col">
                         <h1>Регистрация</h1>
                         <p>Попълнете внимателно формата за регистрация</p>
+
+                        <?php include "components/alert.php" ?>
+
                         <hr class="mb-3">
                         <div class="form-floating mb-3">
                             <input class="form-control" type="text" name="firstname" id="firstname" placeholder="firstname" required>
