@@ -39,8 +39,6 @@
                     <div class="col">
                         <h1>Добавяне на стаи</h1>
 
-                        <?php include "components/alert.php" ?>
-
                         <hr class="mb-3">
 
                         <div class="mb-3">

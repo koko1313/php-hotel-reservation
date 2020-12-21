@@ -27,8 +27,6 @@
         } 
     ?>
 
-    <?php include "components/alert.php" ?>
-
         <div class="table-responsive">
             <table class="table">
                 <thead>

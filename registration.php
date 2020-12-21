@@ -41,8 +41,6 @@
                         <h1>Регистрация</h1>
                         <p>Попълнете внимателно формата за регистрация</p>
 
-                        <?php include "components/alert.php" ?>
-
                         <hr class="mb-3">
                         <div class="form-floating mb-3">
                             <input class="form-control" type="text" name="firstname" id="firstname" placeholder="firstname" required>

@@ -11,8 +11,6 @@
 
     <div class="container main-content">
         <h1>Всички стаи</h1>
-
-        <?php include "components/alert.php" ?>
         
         <div class="table-responsive">
             <table class="table">
