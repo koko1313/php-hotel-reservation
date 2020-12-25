@@ -24,3 +24,16 @@ h1 {
 .carousel-inner p{
     font-size: 1.4em;
 }
+
+.minion {
+    max-height: 100px;
+    width: auto;
+    margin: 0 2rem;
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+}
+
+.minion-right {
+    right: 2rem;
+}

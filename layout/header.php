@@ -24,3 +24,4 @@
 <body class="d-flex flex-column min-vh-100">
 
     <?php include "./layout/menu.php" ?>
+    <?php include "./layout/minions.php" ?>
