@@ -22,6 +22,9 @@
                         <li class="nav-item">
                             <a class="nav-link <?php if($current_page == 'my-reservations') echo 'active' ?>" aria-current="page" href="my-reservations.php">Мои резервации</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?php if($current_page == 'user-profile') echo 'active' ?>" aria-current="page" href="user-profile.php">Профил</a>
+                        </li>
                     <?php } ?>
                     <?php if(isAdmin()) { ?>
                         <li class="nav-item">
