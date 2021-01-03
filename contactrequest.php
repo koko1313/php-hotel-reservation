@@ -7,6 +7,15 @@
             SELECT *
             FROM contactform
         ");
+
+        if(isset($_GET["deleteContactRequest"])) {
+            $db->query("DELETE FROM contactform WHERE id='". $_GET["deleteContactRequest"] ."'");
+
+            $results = $db->query("
+                SELECT *
+                FROM contactform
+            ");
+        }
     ?>
 
     <div class="container main-content">
@@ -18,6 +27,7 @@
                         <th scope="col">Име и Фамилия</th>
                         <th scope="col">Имейл</th>
                         <th scope="col">Съобщение</th>
+                        <th scope="col">Действие</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,6 +36,9 @@
                             <th scope="row"><?php echo $contactform["name"] ?></th>
                             <td><?php echo $contactform["email"] ?></td>
                             <td><?php echo $contactform["text"] ?></td>
+                            <td>
+                                <button class="btn btn-danger" onClick="location.replace('?deleteContactRequest=<?php echo $contactform["id"] ?>')"><i class="fas fa-trash"></i></button>
+                            </td>
                         </tr>
                     <?php } ?>
                 </tbody>
