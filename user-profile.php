@@ -4,7 +4,7 @@
     <div class="container main-content">
         <div class="row">
             <div class="col-sm-3">
-            <img src="http://via.placeholder.com/300x250" class="img-rounded"/>
+            <img src="http://via.placeholder.com/300x250" class="img-rounded img-fluid"/>
             </div>
             <div class="col-sm-3">
                 <h4 class="fw-bolder">Име:</h4>
