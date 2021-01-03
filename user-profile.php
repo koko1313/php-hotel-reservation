@@ -10,7 +10,7 @@
                 <?php if($_SESSION["user"]["image"] != null) { ?>
                     <img src="picture/profile-images/<?php echo $_SESSION["user"]["image"] ?>" class="img-rounded img-fluid"/>
                 <?php } else { ?>
-                    <img src="picture/unknown.jpg" class="img-rounded img-fluid"/>
+                    <img src="picture/profile-images/unknown.jpg" class="img-rounded img-fluid"/>
                 <?php } ?>
 
                 <a class="btn btn-secondary mx-auto mt-3" href="user-image-edit.php">Редактирай снимка</a>

@@ -1,1 +1,4 @@
 picture/profile-images/*
+
+# except the unknown user image
+!picture/profile-images/unknown.jpg
