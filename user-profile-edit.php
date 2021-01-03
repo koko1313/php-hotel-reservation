@@ -20,9 +20,7 @@
             if($db->errno == 1062) {
                 setMessage("dangerMessage", "Вече има регистриран потребител с този email");
             } else {
-                $result = $db->query("SELECT * FROM userview WHERE id = '". $_SESSION["user"]["id"]."'");
-                $user = mysqli_fetch_array($result);
-                $_SESSION ["user"] = $user;
+                fetchUserSession();
                 setMessageAndRedirect("successMessage", "Успешна промяна", "user-profile.php");
             }
         }
