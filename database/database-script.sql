@@ -63,6 +63,7 @@ INNER JOIN roomtype ON room.roomtypeid=roomtype.id;
 CREATE VIEW userview AS 
 SELECT 
 	user.id,
+	user.image,
 	user.firstname,
 	user.lastname,
 	user.phone,
