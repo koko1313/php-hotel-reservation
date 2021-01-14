@@ -29,7 +29,12 @@
     <div class="container main-content">
         <div class="row">
             <div class="col-md-3">
-                <img src="http://via.placeholder.com/300x250" class="img-rounded img-fluid"/>
+                <?php if($_SESSION["user"]["image"] != null) { ?>
+                    <img src="picture/profile-images/<?php echo $_SESSION["user"]["image"] ?>" class="img-rounded img-fluid"/>
+                <?php } else { ?>
+                    <img src="picture/profile-images/unknown.jpg" class="img-rounded img-fluid"/>
+                <?php } ?>
+
             </div>
             <div class="col-md">
                 <form method="POST" onKeyUp="validateForm(this)" onChange="validateForm(this)">

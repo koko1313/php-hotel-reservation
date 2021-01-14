@@ -24,3 +24,6 @@ h1 {
 .carousel-inner p{
     font-size: 1.4em;
 }
+.nav-pills > a.active {
+    color: red;
+}
