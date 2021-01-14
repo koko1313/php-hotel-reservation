@@ -39,6 +39,9 @@
                         <li class="nav-item">
                             <a class="nav-link <?php if($current_page == 'room-add') echo 'active' ?>" aria-current="page" href="room-add.php">Добавяне на стаи</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?php if($current_page == 'all-profiles') echo 'active' ?>" aria-current="page" href="all-profiles.php">Регистрирани профили</a>
+                        </li>
                     <?php } ?>
                 <?php } ?>
             </ul>
