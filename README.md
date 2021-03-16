@@ -13,6 +13,7 @@
     - Bootstrap
 - PHP
 - MySql
+- JavaScript
 
 
 ## Roles in the system
